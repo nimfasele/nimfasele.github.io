@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<section class="bg-light">
+<div class="container bc-icons-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb red lighten-4 bg-light">
+      <li class="breadcrumb-item">
+        <a class="black-text" href="/"><i class="fas fa-home ml-1" aria-hidden="true"></i></a>
+        <i class="fas fa-angle-double-left mx-2" aria-hidden="true"></i>
+      </li>
+      {% for category in page.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}
+      {% if cat %}
+      <li class="breadcrumb-item">
+        <a class="black-text" href="{{cat.url}}">{{cat.title}}</a>
+        <i class="fas fa-angle-double-left mx-2" aria-hidden="true"></i>
+      </li>
+      {% endif %}
+      {% endfor %}
+      <li class="breadcrumb-item active">{{page.title}}</li>
+    </ol>
+  </nav>
+</div>
+
+</section>
+<section>
+
+  <div class="container  py-3">
+    <div class="row">
+    <div class="col-8">
+      <small>{% for category in page.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</small>
+      <h3>{{page.title}}</h3>
+      {% assign critic = site.critics | where: 'short_name', page.critic | first %}{% if critic %} <h6><a href="{{ critic.url }}">{{critic.title}}</a> ({{critic.position}})</h6>{% endif %}
+      <p>{{page.excerpt}}</p>
+      <p><strong>بخوانید اگر: </strong>{{page.doRead}}</p>
+      <p><strong>نخوانید اگر: </strong>{{page.dontRead}}</p>
+      <h5>شناسنامه کتاب:</h5>
+      <ul>
+        <li>عنوان کتاب: {{page.titleFa}}</li>
+        <li>نویسنده: {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</li>
+        {%if page.titleEn%}
+        <li> عنوان اصلی: {{page.titleEn}}</li>
+        <li>مترجم: {{page.translator}}</li>
+         {%endif%}
+         <li>ناشر: {{page.publisher}}</li>
+         <li>تاریخ و نوبت نشر: {{page.pubDate}}</li>
+         <li>تعداد صفحه: {{page.page}}</li>
+      </ul>
+      <small>
+        <i class="fa fa-tag" aria-hidden="true"></i>{% for tag in page.tags %}{% assign ptag = site.tags | where: 'short_name', tag | first %}{% if ptag %} <a href="{{ptag.url}}">{{ptag.title}}</a>{% endif %}{% endfor %}
+        <i class="fa fa-share-alt" aria-hidden="true"></i> <a href="#">اشتراک</a>
+      </small>
+    </div>
+    <div class="col-4">
+      <img class="img-fluid" src="{{page.coverImg}}" alt="">
+    </div>
+</div>
+<hr/>
+<div class="row">
+  <div class="container">
+    <h2>نقد کتاب:</h2>
+     {{content}}
+
+  </div>
+</div>
+</section>

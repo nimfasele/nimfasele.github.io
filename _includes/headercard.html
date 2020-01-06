@@ -1,0 +1,26 @@
+<section>
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-12">
+        <!-- Card -->
+        <div class="card card-cascade wider reverse">
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center">
+
+            <!-- Title -->
+            <h4 class="card-title"><strong>{{ page.title }}</strong></h4>
+            <!-- Subtitle -->
+            <h6 class="font-weight-bold indigo-text py-2"> {{page.position}}</h6>
+            <!-- Text -->
+            <p class="card-text">
+            </p>
+            {% for link in page.links %}
+              <a class="px-2 fa-lg li-ic" href="{{link.url}}" target="_blank"><i class="fa {{link.faicon}}"></i></a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

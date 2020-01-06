@@ -1,0 +1,13 @@
+<!-- Card -->
+<div id="text-card" class="card card-image" onclick="location.href='{{cardurl}}';" style="width: 18rem; background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.45)), url({% if lastpost %}
+{{lastpost.coverImg}}{% endif %});">
+
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-3 px-2">
+    <div style="width:100%;">
+      <h3 class="card-title pt-2"><strong>{{cardtitle}}</strong></h3>
+    </div>
+  </div>
+
+</div>
+<!-- Card -->

@@ -1,0 +1,20 @@
+---
+title: موضوعات
+---
+{% include breadcrumb.html %}
+{% include headercard.html %}
+
+<section>
+  <div class="container py-3">
+    <div class="row py-3">
+      <div class="card-deck">
+      {% for category in site.categories %}
+        {% assign lastpost = site.posts | where: 'categories', category.short_name | last %}
+        {% assign cardtitle = category.title %}
+        {% assign cardurl = category.url %}
+        {% include textcard.html %}
+      {% endfor %}
+       </div>
+    </div>
+  </div>
+</section>

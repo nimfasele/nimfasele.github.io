@@ -1,0 +1,14 @@
+- name: صفحه نخست
+  link: /
+- name: درباره
+  link: /about.html
+- name: وبلاگ
+  link: /blog.html
+- name: نویسندگان
+  link: /authors.html
+- name: منتقدان
+  link: /critics.html
+- name: موضوعات
+  link: /categories.html
+- name: برچسب‌ها
+  link: /tags.html

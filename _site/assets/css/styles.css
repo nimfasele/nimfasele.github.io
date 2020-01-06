@@ -1,0 +1,64 @@
+@charset "UTF-8";
+body { font-family: IRANSans !important; font-weight: 300; }
+
+.current { color: green; font-weight: bold; }
+
+.grid-item { width: 25%; margin: 5px; padding: 10px; }
+
+.grid-item--width2 { width: 50%; }
+
+a.button.active { background: #F76B48; border: 1px solid #F76B48; color: #fff; }
+
+.box-shadow { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); padding: 20px; background: white; border-radius: 5px; margin: 10px 0; }
+
+.box-shadow_img { -webkit-transition: all .2s ease; transition: all .2s ease; vertical-align: top; display: block; width: 100%; height: auto; }
+
+.box-shadow_txt { padding: 10px !important; }
+
+.no-padding { padding: 0px !important; }
+
+.btn.btn-light.active { color: #fff !important; background-color: #5cb85c !important; border-color: #5cb85c !important; outline: none; box-shadow: none; }
+
+.intro-2 { background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg") no-repeat center center; background-size: cover; }
+
+.view { margin-top: -56px; }
+
+.navbar { z-index: 1; }
+
+.bc-icons-2 .breadcrumb-item + .breadcrumb-item::before { content: none; }
+
+.bc-icons-2 .breadcrumb-item.active { color: #455a64; }
+
+#text-card { background-size: 100% auto; cursor: pointer; background-position: center center; }
+
+/**
+*
+*	Name:			IRAN Sans-Serif Font
+*	Version:		5.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Dec 25, 2012
+*	Updated on:		Sep 01, 2017
+*	Website:		             http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت های ایران سن سریف یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+IRAN Sans-serif fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*
+**/
+@font-face { font-family: IRANSans; font-style: normal; font-weight: 900; src: url("/assets/fonts/eot/IRANSansWeb_Black.eot"); src: url("/assets/fonts/eot/IRANSansWeb_Black.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb_Black.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb_Black.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb_Black.ttf") format("truetype"); }
+
+@font-face { font-family: IRANSans; font-style: normal; font-weight: bold; src: url("/assets/fonts/eot/IRANSansWeb_Bold.eot"); src: url("/assets/fonts/eot/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb_Bold.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb_Bold.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb_Bold.ttf") format("truetype"); }
+
+@font-face { font-family: IRANSans; font-style: normal; font-weight: 500; src: url("/assets/fonts/eot/IRANSansWeb_Medium.eot"); src: url("/assets/fonts/eot/IRANSansWeb_Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb_Medium.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb_Medium.ttf") format("truetype"); }
+
+@font-face { font-family: IRANSans; font-style: normal; font-weight: 300; src: url("/assets/fonts/eot/IRANSansWeb_Light.eot"); src: url("/assets/fonts/eot/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb_Light.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb_Light.ttf") format("truetype"); }
+
+@font-face { font-family: IRANSans; font-style: normal; font-weight: 200; src: url("/assets/fonts/eot/IRANSansWeb_UltraLight.eot"); src: url("/assets/fonts/eot/IRANSansWeb_UltraLight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb_UltraLight.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb_UltraLight.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb_UltraLight.ttf") format("truetype"); }
+
+@font-face { font-family: IRANSans; font-style: normal; font-weight: normal; src: url("/assets/fonts/eot/IRANSansWeb.eot"); src: url("/assets/fonts/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/woff2/IRANSansWeb.woff2") format("woff2"), url("/assets/fonts/woff/IRANSansWeb.woff") format("woff"), url("/assets/fonts/ttf/IRANSansWeb.ttf") format("truetype"); }
+
+/*# sourceMappingURL=styles.css.map */

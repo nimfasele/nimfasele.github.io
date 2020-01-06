@@ -1,0 +1,20 @@
+---
+title: برچسب‌ها
+---
+{% include breadcrumb.html %}
+{% include headercard.html %}
+
+<section>
+  <div class="container py-3">
+    <div class="row py-3">
+      <div class="card-deck">
+      {% for tag in site.tags %}
+        {% assign lastpost = site.posts | where: 'tags', tag.short_name | last %}
+        {% assign cardtitle = tag.title %}
+        {% assign cardurl = tag.url %}
+        {% include textcard.html %}
+      {% endfor %}
+       </div>
+    </div>
+  </div>
+</section>

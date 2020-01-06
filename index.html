@@ -1,0 +1,28 @@
+---
+title: صفحه نخست
+---
+<section class="bg-secondary">
+  <div class="container">
+    <div class="row justify-content-center align-content-center" style="min-height: 10rem;">
+      <div id="form-ui" class="row button-group filter-button-group btn-group-toggle m-auto" data-toggle="buttons">
+      	{% for category in site.categories %}
+      		<label class="btn btn-lg btn-outline-light mx-1"><input type="checkbox" name="{{ category.title }}" value=".{{ category.short_name }}" autocomplete="off">{{ category.title }}</label>
+      	{% endfor %}
+      </div>
+    </div>
+  </div>
+
+</section>
+<section class="bg-light">
+<div class="container">
+  <div class="row">
+    <p id="output"></p>
+  </div>
+
+  <div id="grid" class="row py-3">
+    {% for post in site.posts %}
+    {% include card.html %}
+    {% endfor %}
+  </div>
+</div>
+</section>

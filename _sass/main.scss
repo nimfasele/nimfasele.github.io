@@ -1,0 +1,60 @@
+body {
+	font-family: IRANSans !important;
+	font-weight: 300;
+}
+.current {
+  color: green;
+  font-weight: bold;
+}
+.grid-item {
+  width: 25%;
+  margin: 5px;
+  padding: 10px;
+}
+.grid-item--width2 { width: 50%; }
+a.button.active {
+  background: #F76B48;
+  border: 1px solid #F76B48;
+  color: #fff;
+}
+.box-shadow { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); padding: 20px; background: white; border-radius: 5px; margin: 10px 0; }
+.box-shadow_img {
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    vertical-align: top;
+    display: block;
+    width: 100%;
+height: auto;
+}
+.box-shadow_txt {
+  padding: 10px !important;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.btn.btn-light.active {
+  color: #fff !important;
+  background-color: #5cb85c !important;
+  border-color: #5cb85c !important;
+  outline: none;
+  box-shadow: none;
+}
+.intro-2 {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+    background-size: cover;
+}
+.view {
+    margin-top: -56px;
+}
+.navbar {
+    z-index: 1;
+}
+.bc-icons-2 .breadcrumb-item + .breadcrumb-item::before {
+content: none; }
+.bc-icons-2 .breadcrumb-item.active {
+color: #455a64; }
+#text-card {
+	background-size: 100% auto;
+	cursor: pointer;
+	background-position:center center; 
+}

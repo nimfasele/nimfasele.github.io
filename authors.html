@@ -1,0 +1,20 @@
+---
+title: نویسندگان
+---
+{% include breadcrumb.html %}
+{% include headercard.html %}
+
+<section>
+  <div class="container py-3">
+    <div class="row py-3">
+      <div class="card-deck">
+      {% for author in site.authors %}
+        {% assign lastpost = site.posts | where: 'author', author.short_name | last %}
+        {% assign cardtitle = author.title %}
+        {% assign cardurl = author.url %}
+        {% include textcard.html %}
+      {% endfor %}
+       </div>
+    </div>
+  </div>
+</section>
