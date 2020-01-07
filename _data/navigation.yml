@@ -1,14 +1,14 @@
 - name: صفحه نخست
-  link: /nimfaasele/
+  link: /
 - name: درباره
-  link: /nimfaasele/about.html
+  link: /about.html
 - name: وبلاگ
-  link: /nimfaasele/blog.html
+  link: /blog.html
 - name: نویسندگان
-  link: /nimfaasele/authors.html
+  link: /authors.html
 - name: منتقدان
-  link: /nimfaasele/critics.html
+  link: /critics.html
 - name: موضوعات
-  link: /nimfaasele/categories.html
+  link: /categories.html
 - name: برچسب‌ها
-  link: /nimfaasele/tags.html
+  link: /tags.html
