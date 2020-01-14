@@ -11,9 +11,7 @@ parent_url: '/tags.html'
   <div id="grid" class="row py-3">
     {% assign filtered_posts = site.posts | where: 'tags', page.short_name %}
     {% for post in filtered_posts %}
-    <div class="card {{ post.categories | join: ' ' }}" style="width: 18rem;">
     {% include card.html %}
-    </div>
     {% endfor %}
   </div>
 </div>

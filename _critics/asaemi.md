@@ -4,6 +4,6 @@ title: امیر صائمی
 position: پژوهشگاه دانش‌های بنیادی
 criticImg: "/assets/img/criticSaemi.jpg"
 links:
-- faicon: fa-link
+- faicon: fa fa-link
   url: https://sites.google.com/site/saemipersian
 ---

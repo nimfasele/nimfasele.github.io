@@ -8,12 +8,10 @@ parent_url: '/categories.html'
 
 <section class="bg-light">
 <div class="container">
-  <div id="grid" class="row py-3">
+  <div class="row py-3">
     {% assign filtered_posts = site.posts | where: 'categories', page.short_name %}
     {% for post in filtered_posts %}
-    <div class="card {{ post.categories | join: ' ' }}" style="width: 18rem;">
     {% include card.html %}
-    </div>
     {% endfor %}
   </div>
 </div>
