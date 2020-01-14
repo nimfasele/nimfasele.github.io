@@ -47,7 +47,7 @@ p { margin: 0; }
 
 #card { background-color: #111; border-radius: 8px; overflow: hidden; height: 412px; cursor: pointer; backface-visibility: hidden; }
 
-#card-image { height: 412px; object-fit: cover; }
+#card-image { height: 412px; object-fit: cover; width: 100%; }
 
 #card-meta { font-size: em(11); letter-spacing: 1px; }
 
