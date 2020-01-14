@@ -56,5 +56,104 @@ color: #455a64; }
 #text-card {
 	background-size: 100% auto;
 	cursor: pointer;
-	background-position:center center; 
+	background-position:center center;
+}
+
+p {
+  margin: 0;
+}
+
+#filter-display {
+  font-size: 18px;
+  padding: 0.5em;
+  border: 1px solid #CCC;
+  color: blue;
+}
+
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.yellow { background: yellow; color: black; }
+.ckbxBtn {display: none !important;}
+
+// Easing Properties
+
+// PX to EM
+
+
+
+
+
+#card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+	height: 412px;
+	cursor: pointer;
+  backface-visibility: hidden;
+}
+
+#card-image {
+  height: 412px;
+  object-fit: cover;
+
+}
+
+#card-meta {
+  font-size: em(11);
+  letter-spacing: 1px;
+  &:before {
+    content: '';
+    height: 1px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    backface-visibility: hidden;
+    opacity: 0;
+  }
+}
+
+#card-text {
+  color: #FFF;
+  position: absolute;
+  padding: 10px;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+	margin-left: 15px;
+	background-image: linear-gradient(to top, rgb(0, 0, 0),rgba(0, 0, 0, 0));
+	border-radius: inherit;
+}
+
+#card-title {
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: em(30);
+	text-align: right;
+}
+
+#card a {
+  &:hover {
+    .card-text {
+      background-color: rgba(#111, .86);
+      color: #111;
+    }
+    #card-meta {
+      &:before {
+        transform: translate(0,0);
+        background-color: #111;
+        opacity: 1;
+        //@include transition(all 200ms $easeOutQuad);
+      }
+    }
+
+    #card-image {
+      transform: translate(20px,0);
+      //@include transition(all 400ms $easeOutQuad);
+    }
+  }
 }

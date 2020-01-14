@@ -1,14 +1,14 @@
-<div class="card {{ post.categories | join: ' ' }}" style="width: 18rem;">
-  <img class="card-img-top" src="{{post.coverImg}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-    <p class="card-text">{{ post.date | date: "%b %-d, %Y" }}</p>
+<div class="col-sm-3 ">
+<div id="card" class="no-padding {{ post.tags | join: ' ' }}" onclick="location.href='{{post.url}}';">
+  <div id="card-text">
+    <div id="card-meta">{% for category in post.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</div>
+    <h2 id="card-title">{{ post.title }}</h2>
+    <p>
+      <small><i class="fas fa-user-circle" aria-hidden="true"></i> کتاب: {% assign author = site.authors | where: 'short_name', post.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</small>
+      <small><i class="far fa-user-circle" aria-hidden="true"></i> نقد: {% assign critic = site.critics | where: 'short_name', post.critic | first %}{% if critic %} <a href="{{ critic.url }}">{{critic.title}}</a>{% endif %}</small>
+    </p>
   </div>
-  <ul class="list-group list-group-flush">
-    {% if post.doRead %}<li class="list-group-item"><small><strong>بخوانید اگر: </strong>{{post.doRead}}</small></li>{% endif %}
-    {% if post.dontRead %}<li class="list-group-item"><small><strong>نخوانید اگر: </strong>{{post.dontRead}}</small></li>{% endif %}
-  </ul>
-  <div class="card-footer">
-    <small class="text-muted">{% for category in post.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</small>
-  </div>
+
+  <img id="card-image" src="{{post.coverImg}}" />
+</div>
 </div>

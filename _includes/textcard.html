@@ -1,5 +1,6 @@
 <!-- Card -->
-<div id="text-card" class="card card-image" onclick="location.href='{{cardurl}}';" style="width: 18rem; background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.45)), url({% if lastpost %}
+<div class="col-sm-3">
+<div id="text-card" class="card card-image m-1" onclick="location.href='{{cardurl}}';" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.45)), url({% if lastpost %}
 {{lastpost.coverImg}}{% endif %});">
 
   <!-- Content -->
@@ -8,6 +9,6 @@
       <h3 class="card-title pt-2"><strong>{{cardtitle}}</strong></h3>
     </div>
   </div>
-
+</div>
 </div>
 <!-- Card -->
