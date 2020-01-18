@@ -30,15 +30,11 @@ layout: default
     <div class="col-8">
       <small>{% for category in page.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</small>
       <h3>{{page.title}}</h3>
-<<<<<<< HEAD
       <p>
         <small>نقدِ {% assign critic = site.critics | where: 'short_name', page.critic | first %}{% if critic %} <a href="{{ critic.url }}" title="{{critic.position}}">{{critic.title}}</a>{% endif %}</small>
         <small>بر </small>
         <small>کتابِ {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</small>
       </p>
-=======
-      {% assign critic = site.critics | where: 'short_name', page.critic | first %}{% if critic %} <h6><a href="{{ critic.url }}">{{critic.title}}</a> ({{critic.position}})</h6>{% endif %}
->>>>>>> 50f7d541f33e961bd1192d17ab805efc3831a09a
       {% if page.bookIntro %}<p>{{page.bookIntro }}</p>{% endif %}
       {% if page.doRead %}<p><strong>بخوانید اگر: </strong>{{page.doRead}}</p>{% endif %}
       {% if page.dontRead %}<p><strong>نخوانید اگر: </strong>{{page.dontRead}}</p>{% endif %}
