@@ -6,7 +6,11 @@ page: ۴۲۴
 publisher: کرگدن
 pubDate: ۱۳۹۸
 critic: mzamani
+<<<<<<< HEAD
 bookIntro:اين کتاب تلاشي است نظري و تاريخي براي فهم و تبيين ديدگا ههاي معرفت شناسانه سه تن از بزرگ ترين چهره هاي اخير در تاريخ فلسفه غرب: هوسرل، هايدگر و مرلو پونتي. 
+=======
+bookIntro: اين کتاب تلاشي است نظري و تاريخي براي فهم و تبيين ديدگا ههاي معرفت شناسانه سه تن از بزرگ ترين چهره هاي اخير در تاريخ فلسفه غرب: هوسرل، هايدگر و مرلو پونتي. 
+>>>>>>> 50f7d541f33e961bd1192d17ab805efc3831a09a
 coverImg: "/assets/img/coverPietersma.jpg"
 categories: [philosophy]
 tags: [philosophy, phenomenology, epistemology, husserl, heidegger, merleoponti]
