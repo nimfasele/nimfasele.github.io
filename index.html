@@ -8,7 +8,7 @@ title: صفحه نخست
         <div class="option-set form-ui" lass="button-group filter-button-group btn-group-toggle m-auto" data-toggle="buttons">
           <!-- <input type="checkbox" value=""        id="brand-all" class="all" checked /><label for="brand-all">all brands</label>-->
           {% for tag in site.tags %}
-          <label class="btn btn-lg btn-outline-light mx-1"  for="{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label>
+           <span class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg btn-outline-light mx-1"  for="{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
           {% endfor %}
         </div>
     </div>

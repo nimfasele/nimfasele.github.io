@@ -15,7 +15,6 @@ $(function(){
     originLeft: false,
     layoutMode: 'fitRows',
     fitRows: {
-      gutter: 10
     }
   });
   // do stuff when checkbox change
