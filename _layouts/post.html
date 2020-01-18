@@ -31,20 +31,20 @@ layout: default
       <small>{% for category in page.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</small>
       <h3>{{page.title}}</h3>
       {% assign critic = site.critics | where: 'short_name', page.critic | first %}{% if critic %} <h6><a href="{{ critic.url }}">{{critic.title}}</a> ({{critic.position}})</h6>{% endif %}
-      <p>{{page.excerpt}}</p>
-      <p><strong>بخوانید اگر: </strong>{{page.doRead}}</p>
-      <p><strong>نخوانید اگر: </strong>{{page.dontRead}}</p>
+      {% if page.bookIntro %}<p>{{page.bookIntro }}</p>{% endif %}
+      {% if page.doRead %}<p><strong>بخوانید اگر: </strong>{{page.doRead}}</p>{% endif %}
+      {% if page.dontRead %}<p><strong>نخوانید اگر: </strong>{{page.dontRead}}</p>{% endif %}
       <h5>شناسنامه کتاب:</h5>
       <ul>
-        <li>عنوان کتاب: {{page.titleFa}}</li>
-        <li>نویسنده: {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</li>
+        {% if page.titleFa %}<li>عنوان کتاب: {{page.titleFa}}</li>{% endif %}
+        {% if page.author %}<li>نویسنده: {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</li>{% endif %}
         {%if page.titleEn%}
         <li> عنوان اصلی: {{page.titleEn}}</li>
         <li>مترجم: {{page.translator}}</li>
          {%endif%}
-         <li>ناشر: {{page.publisher}}</li>
-         <li>تاریخ و نوبت نشر: {{page.pubDate}}</li>
-         <li>تعداد صفحه: {{page.page}}</li>
+         {% if page.publisher %}<li>ناشر: {{page.publisher}}</li>{% endif %}
+         {% if page.pubDate %}<li>تاریخ و نوبت نشر: {{page.pubDate}}</li>{% endif %}
+         {% if page.page %}<li>تعداد صفحه: {{page.page}}</li>{% endif %}
       </ul>
       <small>
         <i class="fa fa-tag" aria-hidden="true"></i>{% for tag in page.tags %}{% assign ptag = site.tags | where: 'short_name', tag | first %}{% if ptag %} <a href="{{ptag.url}}">{{ptag.title}}</a>{% endif %}{% endfor %}
