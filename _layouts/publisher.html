@@ -1,10 +1,9 @@
 ---
 layout: default
-parent_name: نویسندگان
-parent_url: '/authors.html'
+parent_name: ناشران
+parent_url: '/publishers.html'
 ---
-{% assign pagesize = site.posts | where: 'author', page.short_name | size %}
-
+{% assign pagesize = site.posts | where: 'publisher', page.short_name | size %}
 {% include breadcrumb.html %}
 {% include headercard.html %}
 
@@ -13,13 +12,13 @@ parent_url: '/authors.html'
     <div class="row text-center py-3">
       <div class="col-12">
         <h4>
-          نقد آثار {{ page.title }} در نیم‌فاصله
+          نقد آثار نشر {{ page.title }} در نیم‌فاصله
         </h4>
       </div>
     </div>
     <div class="row py-3">
 
-      {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+      {% assign filtered_posts = site.posts | where: 'publisher', page.short_name %}
       {% for post in filtered_posts %}
         {% include card.html %}
         {% endfor %}

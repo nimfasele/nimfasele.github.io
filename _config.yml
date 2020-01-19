@@ -1,6 +1,8 @@
 collections:
   authors:
     output: true
+  publishers:
+    output: true
   critics:
     output: true
   categories:
@@ -13,6 +15,11 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "publishers"
+    values:
+      layout: "publisher"
   - scope:
       path: ""
       type: "critics"

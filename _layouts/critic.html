@@ -3,6 +3,7 @@ layout: default
 parent_name: منتقدان
 parent_url: '/critics.html'
 ---
+{% assign pagesize = site.posts | where: 'critic', page.short_name | size %}
 {% include breadcrumb.html %}
 {% include headercard.html %}
 

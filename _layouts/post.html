@@ -46,7 +46,7 @@ layout: default
         <li> عنوان اصلی: {{page.titleEn}}</li>
         <li>مترجم: {{page.translator}}</li>
          {%endif%}
-         {% if page.publisher %}<li>ناشر: {{page.publisher}}</li>{% endif %}
+         {% if page.publisher %}<li>ناشر: {% assign publisher = site.publishers | where: 'short_name', page.publisher | first %}{% if publisher %} <a href="{{ publisher.url }}">{{publisher.title}}</a>{% endif %}</li>{% endif %}
          {% if page.pubDate %}<li>تاریخ و نوبت نشر: {{page.pubDate}}</li>{% endif %}
          {% if page.page %}<li>تعداد صفحه: {{page.page}}</li>{% endif %}
       </ul>

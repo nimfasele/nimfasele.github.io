@@ -3,22 +3,33 @@
     <div class="row">
       <div class="col-12">
         <!-- Card -->
-        <div class="card card-cascade wider reverse">
-
-          <!-- Card content -->
-          <div class="card-body card-body-cascade text-center">
-
-            <!-- Title -->
-            <h4 class="card-title"><strong>{{ page.title }}</strong></h4>
-            <!-- Subtitle -->
-            <h6 class="font-weight-bold indigo-text py-2"> {{page.position}}</h6>
-            <!-- Text -->
-            <p class="card-text">
-            </p>
-            {% for link in page.links %}
-              <a class="px-2 fa-lg li-ic" href="{{link.url}}" target="_blank"><i class="{{link.faicon}}"></i></a>
-            {% endfor %}
-          </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+              {% if page.img %}
+              <div class="col-lg-2 col-4 mx-auto text-nowrap text-center px-2">
+                <div class="col-3 text-center">
+                  <div style="height:120px; width:120px; border-radius:50%; background-image: url('{{page.img}}'); background-position:center; background-size:cover;"></div>
+                </div>
+              </div>
+              {% endif %}
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h2 class="d-inline">{{ page.title }}</h2>
+                    <h6>{{ page.position }}</h6>
+                      {% for link in page.links %}
+                      <a href="{{link.url}}" target="_blank" class="fb-ic mr-3" role="button"><i class="{{link.faicon}} fa-lg "></i></a>
+                      {% endfor %}
+                </div>
+                {% if pagesize %}
+                <div class="col-lg-3 col-6 mx-auto">
+                    <div class="row no-gutters text-center justify-content-end align-items-end">
+                        <div class="col">
+                            <h2>{{pagesize}}</h2>
+                            <span class="badge badge-pill badge-dark font-weight-normal">نقد</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
         </div>
       </div>
     </div>
