@@ -17,15 +17,25 @@ $(function(){
     fitRows: {
     }
   });
+  var itemCount =$grid.isotope('getItemElements').length;
+  $('.filter-count').text("نقد "+itemCount+" کتاب در نیم‌فاصله:");
+
   // do stuff when checkbox change
   $('#options').on( 'change', function( jQEvent ) {
     var $checkbox = $( jQEvent.target );
     manageCheckbox( $checkbox );
 
     var comboFilter = getComboFilter( filters );
-
     $grid.isotope({ filter: comboFilter });
-console.log(comboFilter);
+    var filterCount = $grid.isotope('getFilteredItemElements').length;
+  console.log(filterCount);
+  if (filterCount != itemCount) {
+    var aboutTxt = ' مرتبط با'
+  } else {
+    var aboutTxt = ''
+  }
+  $('.filter-count').text("نقد "+filterCount+" کتاب در نیم‌فاصله" + aboutTxt+":");
+
     $filterDisplay.text( comboFilter );
     var comboFilters = comboFilter.split(', ');
     $(comboFilters).each(function(edx, val) {
@@ -70,9 +80,20 @@ function getComboFilter( filters ) {
 
   for ( var prop in filters ) {
     message.push( filters[ prop ].join(' ') );
+    $("label[id='lbl1."+prop+"']").addClass('d-none');
+    $("label[id='lbl2."+prop+"']").removeClass('d-none');
+    $("label[id='lbl2."+prop+"']").addClass('active');
+    $("input[id='lbi2."+prop+"']").prop('checked', true);
+
     var filterGroup = filters[ prop ];
     // skip to next filter group if it doesn't have any values
     if ( !filterGroup.length ) {
+      $("label[id='lbl2."+prop+"']").addClass('d-none');
+      $("label[id='lbl2."+prop+"']").removeClass('active');
+      $("input[id='lbi2."+prop+"']").prop('checked', false);
+      $("label[id='lbl1."+prop+"']").removeClass('active');
+      $("label[id='lbl1."+prop+"']").removeClass('d-none');
+      $("input[id='lbi1."+prop+"']").prop('checked', false);
       continue;
     }
     if ( i === 0 ) {
