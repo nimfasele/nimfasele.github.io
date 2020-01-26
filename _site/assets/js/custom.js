@@ -18,7 +18,6 @@ $(function(){
     }
   });
   var itemCount =$grid.isotope('getItemElements').length;
-  $('.filter-count').text("نقد "+itemCount+" کتاب در نیم‌فاصله:");
 
   // do stuff when checkbox change
   $('#options').on( 'change', function( jQEvent ) {
@@ -34,7 +33,8 @@ $(function(){
   } else {
     var aboutTxt = ''
   }
-  $('.filter-count').text("نقد "+filterCount+" کتاب در نیم‌فاصله" + aboutTxt+":");
+  $('.aboutTxt').text(aboutTxt);
+  $('.filter-count').text(filterCount);
 
     $filterDisplay.text( comboFilter );
     var comboFilters = comboFilter.split(', ');
