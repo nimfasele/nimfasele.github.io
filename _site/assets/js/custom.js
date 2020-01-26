@@ -27,7 +27,6 @@ $(function(){
     var comboFilter = getComboFilter( filters );
     $grid.isotope({ filter: comboFilter });
     var filterCount = $grid.isotope('getFilteredItemElements').length;
-  console.log(filterCount);
   if (filterCount != itemCount) {
     var aboutTxt = ' مرتبط با'
   } else {
