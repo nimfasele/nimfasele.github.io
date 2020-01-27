@@ -34,6 +34,8 @@ layout: default
         <small>نقدِ {% assign reviewer = site.reviewers | where: 'short_name', page.reviewer | first %}{% if reviewer %} <a href="{{ reviewer.url }}" title="{{reviewer.position}}">{{reviewer.title}}</a>{% endif %}</small>
         <small>بر </small>
         <small>کتابِ {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</small>
+        <small><i class="far fa-clock"></i> زمان مطالعه: {% include reading-time.html %}</small>
+
       </p>
       {% if page.bookIntro %}<p>{{page.bookIntro }}</p>{% endif %}
       {% if page.doRead %}<p><strong>بخوانید اگر: </strong>{{page.doRead}}</p>{% endif %}
@@ -49,10 +51,11 @@ layout: default
          {% if page.publisher %}<li>ناشر: {% assign publisher = site.publishers | where: 'short_name', page.publisher | first %}{% if publisher %} <a href="{{ publisher.url }}">{{publisher.title}}</a>{% endif %}</li>{% endif %}
          {% if page.pubDate %}<li>تاریخ و نوبت نشر: {{page.pubDate}}</li>{% endif %}
          {% if page.page %}<li>تعداد صفحه: {{page.page}}</li>{% endif %}
+         <li></li>
       </ul>
       <small>
         <i class="fa fa-tag" aria-hidden="true"></i>{% for tag in page.tags %}{% assign ptag = site.tags | where: 'short_name', tag | first %}{% if ptag %} <a href="{{ptag.url}}">{{ptag.title}}</a>{% endif %}{% endfor %}
-        <i class="fa fa-share-alt" aria-hidden="true"></i> <a href="#">اشتراک</a>
+        <i class="fas fa-share-alt text-secondory"></i>{% include share-buttons.html %}
       </small>
     </div>
     <div class="col-4">

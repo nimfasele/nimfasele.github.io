@@ -1,7 +1,4 @@
----
-title: جایی برای نقد کتاب
----
-<div id="options">
+I"_<div id="options">
 <section class="bg-warning  align-content-center px-5 text-center py-3">
   <div class="container">
     <div class="row justify-content-center align-content-center">
@@ -13,10 +10,10 @@ title: جایی برای نقد کتاب
           {% capture hometags %}
           {% for tag in site.tags %}
           {% assign tagsize = site.posts | where: 'tags', tag.short_name | size %}
-           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg btn-outline-nfdefault mx-1" id="lbl1.{{tag.short_name}}" for="lbi1.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi1.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
+           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg btn-outline-nfdefault mx-1" id="lbl1.{{tag.short_name}}" for="lbi1.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi1.{{tag.short_name}}" name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
           {% endfor %}
           {% endcapture %}
-          {{ hometags | split:'</span>' | sort | reverse | join:'</span>' }}
+          {{ hometags | split:'&lt;/span&gt;' | sort | reverse | join:'&lt;/span&gt;' }}
         </div>
       </div>
     </div>
@@ -32,10 +29,10 @@ title: جایی برای نقد کتاب
           {% capture hometags %}
           {% for tag in site.tags %}
           {% assign tagsize = site.posts | where: 'tags', tag.short_name | size %}
-           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg d-none btn-nfdefault mx-1" id="lbl2.{{tag.short_name}}" for="lbi2.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi2.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
+           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg d-none btn-nfdefault mx-1" id="lbl2.{{tag.short_name}}" for="lbi2.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi2.{{tag.short_name}}" name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
           {% endfor %}
           {% endcapture %}
-          {{ hometags | split:'</span>' | sort | reverse | join:'</span>' }}
+          {{ hometags | split:'&lt;/span&gt;' | sort | reverse | join:'&lt;/span&gt;' }}
         </div>
     </div>
     </div>
@@ -50,3 +47,4 @@ title: جایی برای نقد کتاب
   </div>
 </div>
 </section>
+:ET
