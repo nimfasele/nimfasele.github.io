@@ -33,7 +33,7 @@ $(function(){
     var aboutTxt = ''
   }
   $('.aboutTxt').text(aboutTxt);
-  $('.filter-count').text(filterCount);
+  $('.filter-count').text($.persianNumbers(filterCount));
 
     $filterDisplay.text( comboFilter );
     var comboFilters = comboFilter.split(', ');
