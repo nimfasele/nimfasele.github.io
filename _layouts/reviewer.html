@@ -1,9 +1,9 @@
 ---
 layout: default
 parent_name: منتقدان
-parent_url: '/critics'
+parent_url: '/reviewers'
 ---
-{% assign pagesize = site.posts | where: 'critic', page.short_name | size %}
+{% assign pagesize = site.posts | where: 'reviewer', page.short_name | size %}
 {% include breadcrumb.html %}
 {% include headercard.html %}
 
@@ -16,7 +16,7 @@ parent_url: '/critics'
     </div>
     <div class="row py-3">
 
-        {% assign filtered_posts = site.posts | where: 'critic', page.short_name %}
+        {% assign filtered_posts = site.posts | where: 'reviewer', page.short_name %}
         {% for post in filtered_posts %}
         {% include card.html %}
         {% endfor %}

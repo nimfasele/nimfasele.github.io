@@ -5,7 +5,7 @@ author: makrami
 page: 328
 publisher: negahemoaser
 pubDate: ۱۳۹۲
-critic: mzamani
+reviewer: mzamani
 coverImg: "/assets/img/coverAkrami.jpg"
 categories: [philosophy]
 tags: [cosmology, philosophy, astronomy, philosophy-of-science]

@@ -5,7 +5,7 @@ author: hpietersma
 page: ۴۲۴
 publisher: kargadan
 pubDate: ۱۳۹۸
-critic: mzamani
+reviewer: mzamani
 bookIntro:اين کتاب تلاشي است نظري و تاريخي براي فهم و تبيين ديدگا ههاي معرفت شناسانه سه تن از بزرگ ترين چهره هاي اخير در تاريخ فلسفه غرب: هوسرل، هايدگر و مرلو پونتي.
 coverImg: "/assets/img/coverPietersma.jpg"
 categories: [philosophy]

@@ -7,10 +7,10 @@ title: منتقدان
 <section>
   <div class="container py-3">
     <div class="row py-3">
-      {% for critic in site.critics %}
-        {% assign lastpost = site.posts | where: 'critic', critic.short_name | last %}
-        {% assign cardtitle = critic.title %}
-        {% assign cardurl = critic.url %}
+      {% for reviewer in site.reviewers %}
+        {% assign lastpost = site.posts | where: 'reviewer', reviewer.short_name | last %}
+        {% assign cardtitle = reviewer.title %}
+        {% assign cardurl = reviewer.url %}
         {% include textcard.html %}
       {% endfor %}
     </div>

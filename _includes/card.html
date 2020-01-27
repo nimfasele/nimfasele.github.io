@@ -5,7 +5,7 @@
     <h2 id="card-title">{{ post.title }}</h2>
     <p>
       <small><i class="fas fa-user-circle" aria-hidden="true"></i> کتاب: {% assign author = site.authors | where: 'short_name', post.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</small>
-      <small><i class="far fa-user-circle" aria-hidden="true"></i> نقد: {% assign critic = site.critics | where: 'short_name', post.critic | first %}{% if critic %} <a href="{{ critic.url }}">{{critic.title}}</a>{% endif %}</small>
+      <small><i class="far fa-user-circle" aria-hidden="true"></i> نقد: {% assign reviewer = site.reviewers | where: 'short_name', post.reviewer | first %}{% if reviewer %} <a href="{{ reviewer.url }}">{{reviewer.title}}</a>{% endif %}</small>
     </p>
   </div>
 

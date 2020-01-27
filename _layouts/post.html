@@ -31,7 +31,7 @@ layout: default
       <small>{% for category in page.categories %}{% assign cat = site.categories | where: 'short_name', category | first %}{% if cat %} <a href="{{cat.url}}">{{cat.title}}</a>{% endif %}{% endfor %}</small>
       <h3>{{page.title}}</h3>
       <p>
-        <small>نقدِ {% assign critic = site.critics | where: 'short_name', page.critic | first %}{% if critic %} <a href="{{ critic.url }}" title="{{critic.position}}">{{critic.title}}</a>{% endif %}</small>
+        <small>نقدِ {% assign reviewer = site.reviewers | where: 'short_name', page.reviewer | first %}{% if reviewer %} <a href="{{ reviewer.url }}" title="{{reviewer.position}}">{{reviewer.title}}</a>{% endif %}</small>
         <small>بر </small>
         <small>کتابِ {% assign author = site.authors | where: 'short_name', page.author | first %}{% if author %} <a href="{{ author.url }}">{{author.title}}</a>{% endif %}</small>
       </p>

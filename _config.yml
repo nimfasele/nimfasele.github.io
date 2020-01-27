@@ -4,11 +4,11 @@ collections:
     output: true
   publishers:
     output: true
-  critics:
+  reviewers:
     output: true
   categories:
     output: true
-    permalink: /:name    
+    permalink: /:name
   tags:
     output: true
 defaults:
@@ -24,9 +24,9 @@ defaults:
       layout: "publisher"
   - scope:
       path: ""
-      type: "critics"
+      type: "reviewers"
     values:
-      layout: "critic"
+      layout: "reviewer"
   - scope:
       path: ""
       type: "categories"
