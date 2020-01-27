@@ -2,10 +2,10 @@
 title: صفحه نخست
 ---
 <div id="options">
-<section class="bg-secondary  align-content-center px-5 text-center py-3">
+<section class="bg-warning  align-content-center px-5 text-center py-3">
   <div class="container">
     <div class="row justify-content-center align-content-center">
-      <h4 class="py-3 text-light">به‌دنبال نقد چه نوع کتابی هستید؟</h4>
+      <h4 class="py-3 text-nfdefault">به‌دنبال نقد چه نوع کتابی هستید؟</h4>
     </div>
     <div class="row">
         <div class="option-set form-ui" lass="button-group text-center filter-button-group btn-group-toggle mx-auto" data-toggle="buttons" style="margin: auto;">
@@ -13,7 +13,7 @@ title: صفحه نخست
           {% capture hometags %}
           {% for tag in site.tags %}
           {% assign tagsize = site.posts | where: 'tags', tag.short_name | size %}
-           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg btn-outline-light mx-1" id="lbl1.{{tag.short_name}}" for="lbi1.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi1.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
+           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg btn-outline-nfdefault mx-1" id="lbl1.{{tag.short_name}}" for="lbi1.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi1.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
           {% endfor %}
           {% endcapture %}
           {{ hometags | split:'</span>' | sort | reverse | join:'</span>' }}
@@ -24,14 +24,14 @@ title: صفحه نخست
 <section class="bg-light">
   <div class="container">
     <div class="row justify-content-center align-content-center">
-      <h4 class=" my-3">نقد <span class="filter-count">{{site.posts.size}}</span> کتاب در نیم‌فاصله<span class="aboutTxt"></span>:</h4>
+      <h4 class=" my-3 text-nfdefault">نقد <span class="filter-count">{{site.posts.size}}</span> کتاب در نیم‌فاصله<span class="aboutTxt"></span>:</h4>
     </div>
     <div class="row justify-content-center align-content-center">
         <div class="option-set form-ui" lass="button-group text-center filter-button-group btn-group-toggle m-auto" data-toggle="buttons">
           {% capture hometags %}
           {% for tag in site.tags %}
           {% assign tagsize = site.posts | where: 'tags', tag.short_name | size %}
-           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg d-none btn-outline-secondary mx-1" id="lbl2.{{tag.short_name}}" for="lbi2.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi2.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
+           <span data-sort="{{ tagsize | prepend: '0000' | slice: -4, 4}}" class="option-set" data-group="{{tag.short_name}}"><label class="btn btn-lg d-none btn-nfdefault mx-1" id="lbl2.{{tag.short_name}}" for="lbi2.{{tag.short_name}}"><input class="ckbxBtn" type="checkbox" value=".{{tag.short_name}}" id="lbi2.{{tag.short_name}}"  name="{{ tag.title }}" autocomplete="off" />{{tag.title}}</label></span>
           {% endfor %}
           {% endcapture %}
           {{ hometags | split:'</span>' | sort | reverse | join:'</span>' }}

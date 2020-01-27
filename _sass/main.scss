@@ -2,6 +2,35 @@ body {
 	font-family: IRANSans !important;
 	font-weight: 300;
 }
+
+.bg-nfdefault {
+	background-color: #5c0c0d !important;
+}
+.text-nfdefault {
+	color: #5c0c0d !important;
+}
+.text-nfdefault a:link, .text-nfdefault a:hover, .text-nfdefault a:visited, .text-nfdefault a:active  {
+	color: #5c0c0d !important;
+}
+.btn-outline-nfdefault {
+  border-color: #5c0c0d !important;
+  color: #5c0c0d !important;
+}
+
+.btn-outline-nfdefault:hover {
+  background: #5c0c0d !important;
+  color: white !important;
+}
+.btn-nfdefault {
+  background: #5c0c0d !important;
+  color: white !important;
+}
+
+.btn-nfdefault:hover {
+	border-color: #5c0c0d !important;
+	background: transparentize(white, 0) !important;
+	color: #5c0c0d !important;
+}
 .current {
   color: green;
   font-weight: bold;
