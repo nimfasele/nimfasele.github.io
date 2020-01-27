@@ -1,3 +1,4 @@
+permalink: /:categories/:title/
 collections:
   authors:
     output: true
@@ -7,6 +8,7 @@ collections:
     output: true
   categories:
     output: true
+    permalink: /:name    
   tags:
     output: true
 defaults:

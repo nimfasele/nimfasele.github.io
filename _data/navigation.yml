@@ -1,10 +1,10 @@
 - name: صفحه نخست
   link: /
 - name: نویسندگان
-  link: /authors.html
+  link: /authors
 - name: منتقدان
-  link: /critics.html
+  link: /critics
 - name: موضوعات
-  link: /categories.html
+  link: /categories
 - name: برچسب‌ها
-  link: /tags.html
+  link: /tags
