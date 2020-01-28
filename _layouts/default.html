@@ -9,8 +9,8 @@
     {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
     <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="shortcut icon" type="image/png" href="/img/icon-196x196.png">
-    <link rel="shortcut icon" sizes="196x196" href="/img/icon-196x196.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/icon-196x196.png">
+    <link rel="shortcut icon" sizes="196x196" href="/assets/img/icon-196x196.png">
     <link rel="apple-touch-icon" href="/img/icon-196x196.png">
 
      <!-- Facebook and Twitter integration -->
@@ -34,7 +34,6 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/filtrify.css">
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.css">
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
