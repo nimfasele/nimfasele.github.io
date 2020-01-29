@@ -1,5 +1,10 @@
 title: نیم‌فاصله
 permalink: /:categories/:title/
+gems: [jekyll/imgix]
+imgix:
+  source: assets.imgix.net # Your imgix source address
+  secure_url_token: FACEBEEF12 # (optional) The Secure URL Token associated with your source
+  include_library_param: true  # (optional) If `true` all the URLs will include `ixlib` parameter
 collections:
   authors:
     output: true
