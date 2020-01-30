@@ -1,16 +1,8 @@
-imagemagick:
-  enabled: true
-  widths:
-    - 1024
-    - 512
-    - 0
-  input_directories:
-    - assets/img/
-  input_formats:
-    - ".png"
-    - ".tiff"
-  output_formats:
-    webp: "-quality 100%"
+mini_magick:
+  thumbnail:
+    source: images
+    destination: images/thumbnail
+    resize: "100x100"
 title: نیم‌فاصله
 permalink: /:categories/:title/
 collections:
