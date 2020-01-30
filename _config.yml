@@ -1,7 +1,7 @@
 mini_magick:
   thumbnail:
-    source: img/photos/original
-    destination: img/photos/thumbnail
+    source: images/originals
+    destination: images/thumbnail
     resize: "100x100"
 title: نیم‌فاصله
 permalink: /:categories/:title/
