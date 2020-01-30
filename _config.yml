@@ -1,10 +1,8 @@
 mini_magick:
-    thumbnail:
-        source: images/originals
-        destination: images/thumbnail
-        resize: "100x70^"
-        gravity: "center"
-        extent: "100x70"
+  thumbnail:
+    source: img/photos/original
+    destination: img/photos/thumbnail
+    resize: "100x100"
 title: نیم‌فاصله
 permalink: /:categories/:title/
 collections:
